@@ -38,10 +38,7 @@ var isValid = function(s) {
     const len = s.length
     if(len%2 !== 0) return false
     const stack = []
-    const map = new Map()
-    map.set('(',')')
-    map.set('[',']')
-    map.set('{','}')
+    const map = new Map([['(',')'],['[',']'],['{','}']])
     for(let i=0;i<len;i++){
        var item = s[i]
        if(map.has(item)){
